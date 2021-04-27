@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学习打卡</title>
+    <link rel="stylesheet" href="./study.css" />
+    <link rel="stylesheet" href="../global/css/index.css" />
+    <script src="./study.js"></script>
+
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        /* background-color: rgb(235, 235, 235); */
+        background: url('../../images/two.jpg') no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+      }
+      .study{
+        padding-top: 50px;
+      }
+
+      .w {
+        width: 1200px;
+      }
+      .itemList {
+        margin-top: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .item {
+        background-color: rgb(150, 177, 134);
+        border: 1px solid rgb(173, 172, 172);
+      }
+      .item p {
+        font-weight: 700;
+        padding: 20px 20px;
+        font-size: 20px;
+      }
+      .item .val {
+        padding: 0px 20px 10px 20px;
+        line-height: 20px;
+        letter-spacing: 1px;
+        font-size: 16px;
+        color: rgb(43, 43, 43);
+      }
+      h1.w{
+        text-align: center;
+        color: aliceblue;
+        font-size: 90px;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="study">
+      <h1 class="w">不会吧,不会吧<br>你努力的样子太美了吧</h1>
+      <div class="w itemList">
+        <!-- <section class="item">
+          <p class="date"></p>
+          <div class="val"></div>
+        </section> -->
+      </div>
+      <p></p>
+    </div>
+  </body>
+  <script>
+    let itemList = document.querySelector('.itemList')
+    const dataItemList = [
+      {
+        date: '2021/4/27',
+        value: `1.Object.freeze()   对象冻结<br/>
+                2.attr()   配合content使用，获取自定义属性的值`,
+      },
+    ]
+    let itemListInnerHTMLStr = ''
+    dataItemList.forEach((item) => {
+      itemListInnerHTMLStr += `
+      <section class="item">
+          <p class="date">${item.date}</p>
+          <div class="val">${item.value}</div>
+      </section>`
+    })
+    itemList.innerHTML = itemListInnerHTMLStr
+  </script>
+</html>
