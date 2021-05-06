@@ -1,19 +1,19 @@
-body,html{
-  height: 100%;
+body,
+html {
+  min-height: 100%;
 }
-body{
+body {
   overflow: auto;
 }
 body {
   width: 100%;
   height: 100%;
-  /* background-color: rgb(235, 235, 235); */
   background: url('../../images/two.jpg') no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
 }
-.study{
+.study {
   padding-top: 50px;
 }
 .w {
@@ -21,6 +21,7 @@ body {
 }
 .itemList {
   margin-top: 30px;
+  margin-bottom: 30px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -40,9 +41,34 @@ body {
   font-size: 16px;
   color: rgb(43, 43, 43);
 }
-h1.w{
+h1.w {
   text-align: center;
   color: aliceblue;
   font-size: 90px;
   line-height: 100px;
+}
+
+@media screen and (max-width: 800px) {
+  body,
+  input,
+  textarea,
+  select {
+    font-size: 12pt;
+    line-height: 1.5em;
+  }
+  body .study-herf {
+    display: block;
+  }
+  body .w {
+    width: 300px;
+  }
+  body h1.w {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  body .item p {
+    font-weight: 700;
+    padding: 10px 20px;
+    font-size: 20px;
+  }
 }

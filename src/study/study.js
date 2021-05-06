@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
     {
       date: '2021/4/28',
       value: [`踩坑：空文件石不能转换成base64`],
-      diary: '今天一天啥也没干，就改这个小bug，结果弄了一天，烦死了，害',
+      diary: '今天一天啥也没干，就改这个小bug，结果弄了一天，裂开了呀',
     },
     {
       date: '2021/4/29',
@@ -26,6 +26,10 @@ window.addEventListener('load', () => {
         `了解Vue.API: $options(可调用自定义属性)，$parent(父实例)，$root(根实例)，$watch(类似watch，可关闭watch)，v-is(特定元素时调用组件)`,
       ],
       diary: '五一了，终于可以打游戏了',
+    },
+    {
+      date: '2021/5/6',
+      value: [`熟悉art-template`],
     },
   ]
 
@@ -46,7 +50,7 @@ window.addEventListener('load', () => {
  `
     //  如果有日记  就加上去
     if (item.diary) {
-      itemListInnerHTMLStr += ` <div class="val"><b>日记：</b>${item.diary}</div> </section>`
+      itemListInnerHTMLStr += ` <div class="val"><b>小记：</b>${item.diary}</div> </section>`
       return
     }
     itemListInnerHTMLStr += '</section>'
@@ -56,7 +60,7 @@ window.addEventListener('load', () => {
 
   // 将时间转换成周几
   function toweek(date) {
-    console.log(date);
+    console.log(date)
     let datelist = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
     return datelist[new Date(date).getDay()]
   }
