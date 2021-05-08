@@ -28,6 +28,7 @@ body {
 .item {
   background-color: rgb(150, 177, 134);
   border: 1px solid rgb(173, 172, 172);
+  opacity: 0.8;
 }
 .item p {
   font-weight: 700;
@@ -40,6 +41,11 @@ body {
   letter-spacing: 1px;
   font-size: 16px;
   color: rgb(43, 43, 43);
+  display: flex;
+  /* width: 52px; */
+}
+.item .val b{
+  width: 52px; 
 }
 h1.w {
   text-align: center;
@@ -60,7 +66,7 @@ h1.w {
     display: block;
   }
   body .w {
-    width: 300px;
+    width: 550px;
   }
   body h1.w {
     font-size: 30px;
