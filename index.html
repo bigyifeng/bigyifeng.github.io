@@ -17,6 +17,9 @@
     <script src="./assets/js/vue.min.js"></script>
   </head>
   <style>
+    body {
+      min-width:1200px ;
+    }
     .header_bg {
       background-color: var(--theme-bg-color);
       height: 72px;
@@ -53,7 +56,7 @@
       z-index: 2;
       color: #2b2e2e;
     }
-    .right{
+    .right {
       line-height: 72px;
     }
     .github {
@@ -69,6 +72,13 @@
       position: relative;
       top: 4px;
     }
+    .banner {
+      margin: 0 auto;
+      width: 100%;
+      height: 640px;
+      background: url('https://assets-service.obs.cn-south-1.myhuaweicloud.com/test/mp_562497b0-7fbc-11eb-b1f2-4de4946d79ce/b7fcc1c0-4f83-4f37-a070-cb88511c51e4.png') no-repeat top;
+      background-size:cover
+    }
   </style>
   <body>
     <div id="app">
@@ -77,9 +87,7 @@
           <div class="title">易风 YiFeng</div>
           <ul class="nav">
             <li v-for="item in navList" :key="item.href">
-              <a class="menu-text" :href="item.herf"
-                >{{item.text}}</a
-              >
+              <a class="menu-text" :href="item.herf">{{item.text}}</a>
             </li>
           </ul>
           <div class="right">
@@ -92,17 +100,19 @@
           </div>
         </header>
       </div>
+      <div class="banner">
+      </div>
     </div>
 
     <script>
       $(function () {
-        $('a').attr('target','_blank')
+        $('a').attr('target', '_blank')
         new Vue({
           el: '#app',
           data: {
             navList: [
-              { text: '关于我（建设中）', herf: './src/404.html' },
-              { text: '学习（建设中）', herf: './src/404.html' },
+              { text: '个人简历（建设中）', herf: './src/404.html' },
+              { text: '收藏（建设中）', herf: './src/404.html' },
               { text: '学习打卡', herf: './src/views/study/study.html' },
               { text: '小游戏', herf: './src/views/game/game.html' },
               { text: '联系方式（建设中）', herf: './src/404.html' },
