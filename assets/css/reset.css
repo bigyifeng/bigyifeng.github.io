@@ -211,5 +211,22 @@ a:active {
   justify-content: center;
   align-items: center;
 }
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+html {
+  --theme-bg-color: #fff;
+  --theme-text-color: #fff;
+}
 
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
 
+.auto {
+  margin: 0 auto;
+}
+
+.theme-text {
+  font-size: 24px;
+  font-family: 'TencentSansw3';
+}
