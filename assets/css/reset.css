@@ -230,3 +230,7 @@ html {
   font-size: 24px;
   font-family: 'TencentSansw3';
 }
+.hide{
+  display: none;
+}
+
