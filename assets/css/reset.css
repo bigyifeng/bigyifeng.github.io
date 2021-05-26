@@ -124,21 +124,25 @@ xmp {
   margin: 0;
   padding: 0;
 }
+
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   font: 14px/1 'PingFang SC', 'Microsoft YaHei', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 img {
   display: block;
   border: none;
 }
+
 dl,
 li,
 menu,
@@ -146,12 +150,14 @@ ol,
 ul {
   list-style: none;
 }
+
 button,
 input,
 select,
 textarea {
   outline: none;
 }
+
 a,
 a:link,
 a:visited,
@@ -159,13 +165,16 @@ a:hover,
 a:active {
   text-decoration: none;
 }
+
 /* 浮动方式 */
 .fl {
   float: left;
 }
+
 .fr {
   float: right;
 }
+
 .clearfix::after {
   display: block;
   visibility: hidden;
@@ -174,29 +183,37 @@ a:active {
   font-size: 0;
   content: '';
 }
+
 /* 定位方式 */
 .pr {
   position: relative;
 }
+
 .pa {
   position: absolute;
 }
+
 .pf {
   position: fixed;
 }
+
 .center {
   margin: 0 auto;
 }
+
 /* 对齐方式 */
 .tal {
   text-align: left;
 }
+
 .tac {
   text-align: center;
 }
+
 .tar {
   text-align: right;
 }
+
 /* 居中定位 */
 .c3_ct {
   position: absolute;
@@ -211,6 +228,7 @@ a:active {
   justify-content: center;
   align-items: center;
 }
+
 /* ---------------------------------------------------------------------------------------------------------------------------- */
 html {
   --theme-bg-color: #fff;
@@ -230,7 +248,7 @@ html {
   font-size: 24px;
   font-family: 'TencentSansw3';
 }
-.hide{
+
+.hide {
   display: none;
 }
-
