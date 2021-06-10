@@ -1,7 +1,6 @@
 window.addEventListener('load', () => {
   let itemList = document.querySelector('.itemList')
-  const dataItemList = [
-    {
+  const dataItemList = [{
       date: '2021/4/27',
       value: [
         `Object.freeze()   对象冻结`,
@@ -52,6 +51,51 @@ window.addEventListener('load', () => {
       value: [`中途岛接口调用和调试`],
       diary: '写css是个体力活',
     },
+    {
+      date: '2021/5/18',
+      value: [`小程序获取用户信息，手机信息`],
+      diary: '',
+    },
+    {
+      date: '2021/5/21',
+      value: [`了解npm script脚本`],
+      diary: '',
+    },
+    {
+      date: '2021/5/24',
+      value: [`node官网node入门`],
+      diary: '',
+    },
+    {
+      date: '2021/5/28',
+      value: [`proxy理论`],
+      diary: '',
+    },
+    {
+      date: '2021/6/1',
+      value: [`jaquey中ajax设置`],
+      diary: '',
+    },
+    {
+      date: '2021/6/2',
+      value: [`uniapptabar`],
+      diary: '',
+    },
+    {
+      date: '2021/6/7',
+      value: [`vue2组件使用v-model和sync修饰符`, `vue3组件使用v-model`],
+      diary: 'vue2使用子组件修改父组件的数据时有多种方法，影响了单向数据流，所以vue3进行了统一',
+    },
+    {
+      date: '2021/6/8',
+      value: [`npx`],
+      diary: '',
+    },
+    {
+      date: '2021/6/9',
+      value: [`nodejs内置模块url`],
+      diary: '',
+    },
   ]
 
   let itemListInnerHTMLStr = ''
@@ -63,11 +107,11 @@ window.addEventListener('load', () => {
 
     // 得到周几
     weekStr = toweek(item.date)
-
+    monthStr = toMonth(item.date)
     itemListInnerHTMLStr += `
-      <section class="item">
+      <section class="item month${monthStr}">
       <p class="date">${item.date}  ${weekStr} </p>
-      <div class="val">${itemValueStr}</div>
+      <div class="val month${monthStr}_text">${itemValueStr}</div>
  `
     //  如果有日记  就加上去
     if (item.diary) {
@@ -81,8 +125,11 @@ window.addEventListener('load', () => {
 
   // 将时间转换成周几
   function toweek(date) {
-    console.log(date)
     let datelist = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
     return datelist[new Date(date).getDay()]
+  }
+  // 将时间转换成月份
+  function toMonth(date) {
+    return new Date(date).getMonth() + 1
   }
 })
