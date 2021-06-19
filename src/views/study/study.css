@@ -54,6 +54,11 @@ body {
 
 .item .val b {
   width: 52px;
+  min-width: 52px;
+}
+
+.item .val span {
+  flex: 1;
 }
 
 h1.w {
@@ -78,7 +83,7 @@ h1.w {
 
 /* 五月份 */
 .month5 {
-  background-color: rgb(112, 51, 255);
+  background-color: rgb(172, 137, 255);
 }
 
 .val.month5_text {

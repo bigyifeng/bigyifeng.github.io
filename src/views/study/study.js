@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
         `Object.freeze()   对象冻结`,
         `attr()   配合content使用，获取自定义属性的值`,
       ],
-      diary: '',
+      diary: '可以使用冻结对象来防止项目中其他地方对该对象进行的修改',
     },
     {
       date: '2021/4/28',
@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
     {
       date: '2021/5/6',
       value: [`art-template`],
-      diary: '',
+      diary: '不怎么好用，但是小',
     },
     {
       date: '2021/5/7',
@@ -44,7 +44,7 @@ window.addEventListener('load', () => {
     {
       date: '2021/5/11',
       value: [`vue3 Suspense`],
-      diary: '',
+      diary: '来进行异步组件的显示',
     },
     {
       date: '2021/5/13',
@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
     {
       date: '2021/5/18',
       value: [`小程序获取用户信息，手机信息`],
-      diary: '',
+      diary: '必须得用户触发button才能进行接口的调用',
     },
     {
       date: '2021/5/21',
@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
     {
       date: '2021/5/24',
       value: [`node官网node入门`],
-      diary: '',
+      diary: '东西不多',
     },
     {
       date: '2021/5/28',
@@ -73,12 +73,12 @@ window.addEventListener('load', () => {
     },
     {
       date: '2021/6/1',
-      value: [`jaquey中ajax设置`],
+      value: [`jquery中ajax设置`],
       diary: '',
     },
     {
       date: '2021/6/2',
-      value: [`uniapptabar`],
+      value: [`uni-app的tabar`],
       diary: '',
     },
     {
@@ -89,12 +89,22 @@ window.addEventListener('load', () => {
     {
       date: '2021/6/8',
       value: [`npx`],
-      diary: '',
+      diary: '可调用还没下载的依赖，执行完之后进行依赖的删除',
     },
     {
       date: '2021/6/9',
       value: [`nodejs内置模块url`],
-      diary: '',
+      diary: '对url地址的各种处理',
+    },
+    {
+      date: '2021/6/15',
+      value: [`nodejs内置模块http->request`],
+      diary: '可进行所有请求',
+    },
+    {
+      date: '2021/6/19',
+      value: [`JSONP`],
+      diary: '主要是运用了node环境没有同源策略的，来使用node的http模块进行其它接口的请求，将其它接口返回的数据返回给前端，然后再调用前端写好的脚本里面的方法来操作服务器返回的数据，实现跨域',
     },
   ]
 
@@ -115,7 +125,7 @@ window.addEventListener('load', () => {
  `
     //  如果有日记  就加上去
     if (item.diary) {
-      itemListInnerHTMLStr += ` <div class="val"><b>小记：</b>${item.diary}</div> </section>`
+      itemListInnerHTMLStr += ` <div class="val"><b>小记：</b><span>${item.diary}</span></div> </section>`
       return
     }
     itemListInnerHTMLStr += '</section>'
