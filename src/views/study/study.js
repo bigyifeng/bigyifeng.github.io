@@ -106,6 +106,11 @@ window.addEventListener('load', () => {
       value: [`JSONP`],
       diary: '主要是运用了node环境没有同源策略的，来使用node的http模块进行其它接口的请求，将其它接口返回的数据返回给前端，然后再调用前端写好的脚本里面的方法来操作服务器返回的数据，实现跨域',
     },
+    {
+      date: '2021/6/22',
+      value: [`vuepress`],
+      diary: '使用vuepress建立自己的知识库，方便以后查阅资料,基础模板功能较少，于是添加了vdoing这个主题',
+    },
   ]
 
   let itemListInnerHTMLStr = ''
