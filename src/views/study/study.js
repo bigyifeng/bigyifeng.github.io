@@ -111,6 +111,11 @@ window.addEventListener('load', () => {
       value: [`vuepress`],
       diary: '使用vuepress建立自己的知识库，方便以后查阅资料,基础模板功能较少，于是添加了vdoing这个主题',
     },
+    {
+      date: '2021/6/22',
+      value: [`BFC 用来清除浮动  防止mergin重叠，自适应多栏布局`, '$route.matched  返回该页面所在路由'],
+      diary: 'BFC是CSS2.1就有的一种布局方式',
+    },
   ]
 
   let itemListInnerHTMLStr = ''
