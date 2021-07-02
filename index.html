@@ -14,99 +14,125 @@
   <script src="./assets/js/vue.min.js"></script>
 </head>
 <style>
+  html {
+    width: 100%;
+    height: 100%;
+  }
+
   body {
+    height: 100%;
     min-width: 1200px;
+    background: url('./images/317546.jpg') no-repeat;
+    background-size: cover;
+    min-height: 700px;
   }
 
-  .header_bg {
-    background-color: var(--theme-bg-color);
-    height: 72px;
+  h1 {
+    display: none;
   }
 
-  header {
+  #app {
+    width: 100%;
     height: 100%;
     display: flex;
-    line-height: 72px;
-    color: #2b2e2e;
+    justify-content: center;
+    align-items: center;
+    animation: grammaticalization 2s linear infinite alternate;
   }
 
-  header .title {
-    font-size: 22px;
-    color: #0555da;
-    font-weight: bold;
-    width: 200px;
+  .content {
+    width: 700px;
+    height: auto;
+    padding: 50px 0;
+    transform: translateY(-80px);
   }
 
-  header .nav {
-    display: flex;
-    justify-content: space-around;
-    flex: 1;
-  }
-
-  header .nav li {}
-
-  header .nav .menu-text {
-    display: block;
-    padding: 0;
-    height: 72px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 72px;
-    opacity: 0.95;
-    -webkit-transition: color 0.3s linear;
-    position: relative;
-    z-index: 2;
-    color: #2b2e2e;
-  }
-
-  .right {
-    line-height: 72px;
-  }
-
-  .github {
-    display: block;
-    font-size: 25px;
-    cursor: pointer;
-    height: 72px;
-    transform: translateY(-4px);
-  }
-
-  .github::before {
-    font-size: 35px;
-    transform: translateY(-4px);
-    position: relative;
-    top: 4px;
-  }
-
-  .banner {
+  .logo {
+    animation: smallToBig 2s linear infinite alternate;
     margin: 0 auto;
+    width: 170px;
+    height: 170px;
+    margin-bottom: 20px;
+  }
+
+  .logo img {
     width: 100%;
-    height: 640px;
-    background: url('https://assets-service.obs.cn-south-1.myhuaweicloud.com/test/mp_562497b0-7fbc-11eb-b1f2-4de4946d79ce/b7fcc1c0-4f83-4f37-a070-cb88511c51e4.png') no-repeat top;
-    background-size: cover
+    height: 100%;
+  }
+
+  .nav {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, .7);
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .nav li {
+    color: #409eff;
+    min-width: 80px;
+    font-size: 20px;
+  }
+
+  .nav li a {
+    color: #409eff;
+    font-size: 20px;
+  }
+  p{
+    color: #43b98e;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* 背景虚化 */
+  @keyframes grammaticalization {
+    0% {
+      backdrop-filter: blur(1px);
+    }
+
+    50% {
+      backdrop-filter: blur(6px);
+    }
+
+    100% {
+      backdrop-filter: blur(1px);
+    }
+  }
+
+  @keyframes smallToBig {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1);
+    }
   }
 </style>
 
 <body>
   <h1 class="hide">洪一锋</h1>
   <div id="app">
-    <div class="header_bg">
-      <header class="w">
-        <div class="title">易风 YiFeng</div>
-        <ul class="nav">
-          <li v-for="item in navList" :key="item.href">
-            <a class="menu-text" :href="item.herf">{{item.text}}</a>
-          </li>
-        </ul>
-        <div class="right">
-          <a href="https://github.com/bigyifeng/bigyifeng.github.io" class="blog-github iconfont github">
-            GitHub
-          </a>
-        </div>
-      </header>
+    <div class="content w">
+      <div class="logo">
+        <img src="./images/可达鸭.png" alt="">
+      </div>
+      <ul class="nav">
+        <li v-for="item in navList" :key="item.href">
+          <a class="menu-text" :href="item.herf">{{item.text}}</a>
+        </li>
+      </ul>
+      <p>时光正好，未来可期，加油 ！
+      </p>
     </div>
-    <div class="banner">
-    </div>
+
   </div>
 
   <script>
@@ -115,10 +141,11 @@
       new Vue({
         el: '#app',
         data: {
-          navList: [{
-              text: '个人简历（建设中）',
-              herf: './src/views/me/me.html'
-            },
+          navList: [
+            // {
+            //   text: '个人简历（建设中）',
+            //   herf: './src/views/me/me.html'
+            // },
             {
               text: '知识库',
               herf: './repository/index.html'
@@ -127,12 +154,16 @@
               text: '学习打卡',
               herf: './src/views/study/study.html'
             },
+            // {
+            //   text: '技术分享（建设中）',
+            //   herf: './src/404.html'
+            // },
+            // {
+            //   text: '联系方式（建设中）',
+            //   herf: './src/404.html'
+            // },
             {
-              text: '技术分享（建设中）',
-              herf: './src/404.html'
-            },
-            {
-              text: '联系方式（建设中）',
+              text: 'Github',
               herf: './src/404.html'
             },
           ],
