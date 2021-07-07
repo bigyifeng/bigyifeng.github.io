@@ -6,9 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>项目列表</title>
-  <link rel="stylesheet" href="../../../assets/css/reset.css">
-  <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
-  <script src="../../../assets/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <!-- 头部 -->
+  <script src="/assets/js/vue.min.js"></script>
+  <link rel="stylesheet" href="/src/components/header/header.css">
+  <script src="/src/components/header/header.js"></script>
 </head>
 <style>
   .items {
@@ -18,13 +23,38 @@
   .list-group li {
     cursor: pointer;
   }
+
+  .list-group li a {
+    text-decoration: none;
+  }
 </style>
 
 <body>
+  <!-- 头部 -->
+  <h1 class="hide">洪一锋</h1>
+  <div id="header">
+    <div class="header_bg">
+      <header class="w">
+        <div class="title"><a href="/">易风 YiFeng</a> </div>
+        <ul class="nav">
+          <li v-for="item in navList" :key="item.href">
+            <a class="menu-text" :href="item.herf">{{item.text}}</a>
+          </li>
+        </ul>
+        <div class="right">
+          <a href="https://github.com/bigyifeng/bigyifeng.github.io" class="blog-github iconfont github">
+            GitHub
+          </a>
+        </div>
+      </header>
+    </div>
+  </div>
+
 
   <div class="items w">
     <ul class="list-group">
-      <li class="list-group-item" data-href='../../../items/v3_admin'>后台管理系统 （vue3 + element-plus）</li>
+      <li class="list-group-item"> <a href="/items/v3_admin/index.html" target="_blank">后台管理系统 （vue3 + element-plus）</a>
+      </li>
       <!-- <li class="list-group-item">Dapibus ac facilisis in</li>
       <li class="list-group-item">Morbi leo risus</li>
       <li class="list-group-item">Porta ac consectetur ac</li>
@@ -38,11 +68,8 @@
 
 
 </body>
-<script src="../../../assets/js/jquery.min.js"></script>
 <script>
-  $('.items .list-group li').click(function(){
-    window.location.href=$(this).attr('data-href')
-  })
+
 </script>
 
 </html>

@@ -31,10 +31,14 @@
   }
 
   header .title {
-    font-size: 22px;
-    color: #0555da;
-    font-weight: bold;
     width: 200px;
+    cursor: pointer;
+  }
+
+  header .title a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0555da;
   }
 
   header .nav {
@@ -68,7 +72,7 @@
     font-size: 25px;
     cursor: pointer;
     height: 72px;
-    transform: translateY(-4px);
+    transform: translateY(-1px);
   }
 
   .github::before {
@@ -89,10 +93,10 @@
 
 <body>
   <h1 class="hide">洪一锋</h1>
-  <div id="app">
+  <div id="header">
     <div class="header_bg">
       <header class="w">
-        <div class="title">易风 YiFeng</div>
+        <div class="title"><a href="/">易风 YiFeng</a> </div>
         <ul class="nav">
           <li v-for="item in navList" :key="item.href">
             <a class="menu-text" :href="item.herf">{{item.text}}</a>
@@ -105,15 +109,14 @@
         </div>
       </header>
     </div>
-    <div class="banner">
-    </div>
+    <!-- <div class="banner">
+    </div> -->
   </div>
 
   <script>
     $(function () {
-      $('a').attr('target', '_blank')
       new Vue({
-        el: '#app',
+        el: '#header',
         data: {
           navList: [{
               text: '个人简历（建设中）',
@@ -128,8 +131,8 @@
               herf: './src/views/study/study.html'
             },
             {
-              text: '技术分享（建设中）',
-              herf: './src/404.html'
+              text: '演示项目',
+              herf: './src/views/items/items.html'
             },
             {
               text: '联系方式（建设中）',
