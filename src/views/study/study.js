@@ -116,6 +116,16 @@ window.addEventListener('load', () => {
       value: [`BFC 用来清除浮动  防止mergin重叠，自适应多栏布局`, '$route.matched  返回该页面所在路由'],
       diary: 'BFC是CSS2.1就有的一种布局方式',
     },
+    {
+      date: '2021/7/5',
+      value: [`Generator 函数`, 'canvas'],
+      diary: 'canvas主要是使用js进行画图',
+    },
+    {
+      date: '2021/7/7',
+      value: [`vuex->module`, '页面截图'],
+      diary: '',
+    },
   ]
 
   let itemListInnerHTMLStr = ''
