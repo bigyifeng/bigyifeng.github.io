@@ -106,9 +106,24 @@ h1.w {
   color: rgb(80, 102, 0);
 }
 
-.itemList .month6:nth-of-type(4) {
-  /* margin-bottom: 50px; */
+.itemList .month6:nth-of-type(1) {
+  margin-bottom: 50px;
 }
+
+/* 七月份 */
+.month7 {
+  background-color: rgb(248, 233, 95);
+}
+
+.val.month7_text {
+  color: rgb(81, 90, 48);
+}
+
+/* .itemList .month7:nth-of-type(30) {
+  margin-bottom: 50px;
+} */
+
+
 
 @media screen and (max-width: 800px) {
 
