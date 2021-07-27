@@ -136,6 +136,24 @@ window.addEventListener(`load`, () => {
       value: [`虚拟列表的实现`, `开通公众号`, `v-slot`],
       diary: `虽然slot-scope依然可以用，但是语法已经废弃，以后尽量使用新的语法v-slot`,
     },
+    {
+      date: `2021/7/23`,
+      value: [`创建nuxt项目，熟悉nuxt项目结构`, `nuxt->route`],
+      diary: `在page里创建.vue文件时项目自动生成路由（类似uni-app）`,
+    },
+    {
+      date: `2021/7/20`,
+      value: [`nuxt->layout`, '使用koa-generator脚手架创建node项目'],
+      diary: ``,
+    },
+    {
+      date: `2021/7/27`,
+      value: [`nuxt->asyncData()，页面渲染之前将请求获取的内容渲染到html上`,
+        'nxut->$axios，$axios是nuxt里面封装的一个axios，尽量使用这个而不是去使用node_module里面的axios，如果想使用拦截器的话需要在plugins文件夹里面新建文件，然后引入到nuxt.config.js里面',
+        `nxut->vuex，语法跟vue有一点不一样，但是用法完全一样`
+      ],
+      diary: `asyncData和fetch的区别：asyncData主要用来修改当前页面组件的数据，而fetch主要用来修改vuex里面的数据（因为fetch的参数可以调用store这个变量）`,
+    },
   ]
 
   let itemListInnerHTMLStr = ``
